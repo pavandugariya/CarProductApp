@@ -27,6 +27,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   // const [isLoading, setIsLoading] = useState(true);
   // const [userToken, setUserToken] = useState(null);
+  // const [isDarkTheme, setIsDarkTheme] = React.useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const scheme = useColorScheme();
@@ -51,7 +52,7 @@ const App = () => {
   const CustomDarkTheme = {
 
     ...NavigationDarkTheme,
-   ...PaperDarkTheme,
+    ...PaperDarkTheme,
     color: {
       ...NavigationDarkTheme.colors,
       ...PaperDarkTheme.colors,
@@ -94,9 +95,9 @@ const App = () => {
     }
 
   }
-  
-  
-    const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState);
+
+
+  const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState);
 
   const authContext = React.useMemo(() => ({
     signIn: async (userName, password) => {
@@ -160,7 +161,7 @@ const App = () => {
 
   return (
     <PaperProvider  >
- {/* theme={themes} */}
+      {/* theme={themes} */}
       <AuthContext.Provider value={authContext}>
         <NavigationContainer >
 

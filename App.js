@@ -27,7 +27,6 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   // const [isLoading, setIsLoading] = useState(true);
   // const [userToken, setUserToken] = useState(null);
-  // const [isDarkTheme, setIsDarkTheme] = React.useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const scheme = useColorScheme();
